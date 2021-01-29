@@ -5,7 +5,7 @@ import {
   DELETE,
   LIKEUPDATE,
 } from "../constants/actionTypes";
-export default (posts = [], action) => {
+const routeSet = (posts = [], action) => {
   switch (action.type) {
     case DELETE:
       return posts.filter((post) => post._id !== action.payload);
@@ -22,3 +22,4 @@ export default (posts = [], action) => {
       return posts;
   }
 };
+export default routeSet;
